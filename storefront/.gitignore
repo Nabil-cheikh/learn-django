@@ -28,5 +28,3 @@ venv.bak/
 *~
 .project
 .pydevproject
-
-.gitignore
