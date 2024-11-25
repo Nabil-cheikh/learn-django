@@ -1,16 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.db import transaction, connection
+from django.contrib.contenttypes.models import ContentType
+from store.models import Collection, Order, OrderItem, Product
+from tags.models import TaggedItem
 
-def calculate():
-    x = 1
-    y = 2
-    return x
-
-# Create your views here.
 def say_hello(request):
-    x = calculate()
-    return render(request,
-                  'hello.html',
-                  {
-                      'name': 'Nabil',
-                  })
+    with connection.cursor() as cursor:
+        cursor.callproc('')
+
+    return render(request, 'hello.html', {'name': 'Mosh'})
