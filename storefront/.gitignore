@@ -4,7 +4,6 @@
 *.pyd
 __pycache__/
 *.so
-../.python-version
 
 # Django
 *.log
@@ -29,3 +28,5 @@ venv.bak/
 *~
 .project
 .pydevproject
+
+.gitignore
