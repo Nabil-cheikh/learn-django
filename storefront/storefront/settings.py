@@ -36,7 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_filters',
     'django.contrib.sessions',
+    'rest_framework',
     'playground',
     'debug_toolbar',
     'store',
@@ -89,11 +91,11 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'storefront',
+        'NAME': 'storefront2',
         'HOST': '127.0.0.1',
         'USER': 'root',
         'PASSWORD': 'Htsukodesu',
-        'PORT': '33061',
+        'PORT': '3306',
     }
 }
 
@@ -140,3 +142,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'COERCE_DECIMAL_TO_STRING': False
+}
